@@ -41,7 +41,7 @@ const init = () => {
     })
 
     // Controls
-    // const controls = new OrbitControls(camera, canvas)
+    const controls = new OrbitControls(camera, canvas)
     // controls.enableDamping = true
 
     /**
