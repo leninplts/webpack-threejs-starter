@@ -3,10 +3,8 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import * as dat from 'dat.gui'
-import { Scene } from 'three'
 
-let camera, scene, renderer, video
-let sphere
+let camera, scene, renderer
 const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
@@ -15,11 +13,10 @@ const sizes = {
 const canvas = document.querySelector('canvas.webgl')
 // Debug
 const gui = new dat.GUI()
+// Scene
+scene = new THREE.Scene()
 
 const init = () => {
-
-    // Scene
-    scene = new THREE.Scene()
     
     // Base camera
     camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 1000)
